@@ -6,7 +6,7 @@ const getLeads = async (req, res) => {
     const leads = await Leads.find();
     res.status(200).json({
       success: true,
-      message: "Retrived all data",
+      message: "Retrived all leads data",
       data: leads,
     });
   } catch (error) {
