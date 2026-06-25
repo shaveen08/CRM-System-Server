@@ -13,6 +13,11 @@ const usersSchema = new mongoose.Schema(
       unique: true,
     },
 
+    password: {
+      type: String,
+      required: true,
+    },
+
     role: {
       type: String,
       required: true,
@@ -27,6 +32,9 @@ const usersSchema = new mongoose.Schema(
       type: String,
       enum: ["Active", "Inactive"],
       default: "Active",
+    },
+    lastLogin: {
+      type: Date,
     },
   },
   {
